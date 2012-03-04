@@ -1,0 +1,10 @@
+{
+  "name"          : "LIFFFT Helpers",
+  "description"   : "Some simple utility functions from LIFFFT",
+  "url"           : "http://liffft.com",
+  "keywords"      : ["util", "functional", "server"],
+  "author"        : "Kav Latiolais <kav@liffft.com>",
+  "contributors"  : [],
+  "main"          : "index",
+  "version"       : "0.0.1"
+}

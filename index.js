@@ -1,0 +1,1 @@
+exports.fsObjectify = require('./lib/fsobjectify.coffee');
