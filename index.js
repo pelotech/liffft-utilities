@@ -1,6 +1,6 @@
-function(){
-  module.exports = function(app){
-    exports.objectify = require('./lib/objectify.coffee');
-    exports.routify = require('./lib/routify.coffee')(app);
-  };
-}();
+module.exports = function(app){
+  return {
+    objectify: require('./lib/objectify.coffee'),
+    routify: require('./lib/routify.coffee')(app)
+  }
+};
