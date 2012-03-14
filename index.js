@@ -1,1 +1,2 @@
-exports.fsObjectify = require('./lib/fsobjectify.coffee');
+exports.objectify = require('./lib/objectify.coffee');
+exports.routify = require('./lib/routify.coffee');
