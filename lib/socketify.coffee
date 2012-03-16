@@ -8,20 +8,21 @@ module.exports = (io) ->
       object)
       
       return cb new Error "Invalid Function" unless isFunction(functionObject)
+      delete data.function
       
       return functionObject(data, cb)
       
-    initializeRoute = (path, object) ->
-      for key in Object.keys(object)
-        do(key) ->
-          if(isFunction(object[key]))
-            #add rout
-            app.get "#{path}.#{key}", (req, res) ->
-              object[key] req.params, (result) ->
-                res.render(result)
-          else
-            initializeRoute("#{path}/#{key}",object[key])
-    return initializeRoute(path, object)
+    # initializeRoute = (path, object) ->
+    #   for key in Object.keys(object)
+    #     do(key) ->
+    #       if(isFunction(object[key]))
+    #         #add rout
+    #         app.get "#{path}.#{key}", (req, res) ->
+    #           object[key] req.params, (result) ->
+    #             res.render(result)
+    #       else
+    #         initializeRoute("#{path}/#{key}",object[key])
+    # return initializeRoute(path, object)
     
     
     
