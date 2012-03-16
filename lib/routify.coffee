@@ -6,8 +6,8 @@ module.exports = (app) ->
           if(isFunction(object[key]))
             #add rout
             app.get "#{path}/#{key}", (req, res) ->
-              object[key] (result) ->
-                res.render(reesult)
+              object[key] req.params, (result) ->
+                res.render(result)
           else
             initializeRoute("#{path}/#{key}",object[key])
     return initializeRoute(path, object)
